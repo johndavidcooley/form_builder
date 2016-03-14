@@ -1,1 +1,60 @@
 /* CSS Entry Point */
+
+form {
+	border: 2px solid #bbbbbb;
+	border-radius: 6px;
+	margin: 30px auto auto auto;
+	width: 500px;
+}
+
+.top, .bottom {
+	color: #fdfeff;
+	font-family: Helvetica;
+	height: 80px;
+	line-height: 80px;
+	padding-left: 20px;
+}
+
+.top {
+	background: #398bc7;
+	font-size: 28px;
+}
+
+.middle {
+	margin: 20px 10px 20px 10px;
+	text-align: center;
+}
+
+.input-box {
+	border: 1px solid #bbbbbb;
+	border-radius: 3px;
+	margin: 5px 0px 5px 0px;
+	height: 30px;
+	width: 450px;
+}
+
+#text-box {
+	width: 450px;
+	height: 100px;
+	margin: 5px 0px 5px 0px;
+}
+
+#select-box {
+	height: 35px;
+	width: 454px;
+}
+
+.bottom {
+	background: #c7deef;
+}
+
+button {
+	background: #398bc7;
+	border: none;
+	border-radius: 3px;
+	color: #fdfeff;
+	font-family: Helvetica;
+	font-size: 12px;
+	height: 35px;
+	width: 100px;
+}
