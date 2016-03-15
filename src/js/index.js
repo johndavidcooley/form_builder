@@ -1,19 +1,19 @@
 // Javascript Entry Point
 
+import $ from 'jquery';
+
 import items from './data';
 
 import { inputTemplate, selectTemplate, textAreaTemplate } from './templates';
 
-import $ from 'jquery';
-
 var $middle = $('.middle');
 
 // var itemTypeToTemplate = {
-// 	"text" : input,
-// 	"email" : input,
-// 	"tel" : input,
-// 	"select" : select,
-// 	"textarea" : textArea
+// 	"text" : inputTemplate,
+// 	"email" : inputTemplate,
+// 	"tel" : inputTemplate,
+// 	"select" : selectTemplate,
+// 	"textarea" : textAreaTemplate
 // };
 
 // items.forEach(function(item) {
@@ -22,7 +22,7 @@ var $middle = $('.middle');
 // 	$fromJS.append(toThePage);
 // });
 
-
+console.log(inputTemplate(items[0]))
 
 
 items.forEach(function(item) {
@@ -34,7 +34,7 @@ items.forEach(function(item) {
 	} else if (item.type === "textarea") {
 		template = textAreaTemplate;
 	}
-	console.log(template);
+	// console.log(template);
 	var toThePage = template(item);
-	// $middle.append(toThePage);
+	$middle.append(toThePage);
 });
