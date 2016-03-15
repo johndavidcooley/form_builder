@@ -1,19 +1,19 @@
 // Javascript Entry Point
 
-import $ from 'jquery';
-
 import items from './data';
 
-import { input, select, textArea } from './templates';
+import { inputTemplate, selectTemplate, textAreaTemplate } from './templates';
 
-var $fromJS = $('.from-js');
+import $ from 'jquery';
+
+var $middle = $('.middle');
 
 // var itemTypeToTemplate = {
 // 	"text" : input,
 // 	"email" : input,
 // 	"tel" : input,
 // 	"select" : select,
-// 	"textArea" : textArea
+// 	"textarea" : textArea
 // };
 
 // items.forEach(function(item) {
@@ -23,16 +23,18 @@ var $fromJS = $('.from-js');
 // });
 
 
+
+
 items.forEach(function(item) {
 	var template;
-	if (item.type === "text" || item.type === "email" || item.type || "tel") {
-		template = input;
+	if (item.type === "text" || item.type === "email" || item.type === "tel") {
+		template = inputTemplate;
 	} else if (item.type === "select") {
-		template = select;
-	} else if (item.type === "textArea") {
-		template = textArea;
+		template = selectTemplate;
+	} else if (item.type === "textarea") {
+		template = textAreaTemplate;
 	}
+	console.log(template);
 	var toThePage = template(item);
-	$fromJS.append(toThePage);
+	// $middle.append(toThePage);
 });
-

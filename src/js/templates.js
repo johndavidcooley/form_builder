@@ -1,9 +1,11 @@
-export function input(item) {
 
+
+export function inputTemplate({id, label, type}) {
+	// return "suck it";
+	return
 	`
-	<div>
-		<input class="input-box" type="text" placeholder="${item.label}">
-	</div>
+		<label for="${id}">${label}</label>
+		<input class="input-box" type="${type}" id="${id}"></input>
 	`
 };
 
@@ -11,36 +13,33 @@ export function input(item) {
 
 
 
-export function select(item) {
+export function selectTemplate({id, label, options}) {
 
-var option = item.options['value'];
 
-var optionHtml = option.map(function(opt) {
-	return `<option value="${opt}"></option>`
-})
+var optionTemplates = options.map(function({label, value}) {
+	return `<option value="${value}">${label}</option>`
+});
 
-optionHtml = optionHtml.join('');
+var optionsTemplateString = optionTemplates.join('');
 
-	`
-	<div>
-		<select class="input-box" id="select-box">
-			${item.label}
-			${optionHtml}
-		</select>
-	</div>
-		`
-
+return
+`
+<label for="${id}">${label}</label>
+<select class="input-box" id="${id}">
+${optionsTemplateString}
+</select>
+`
 };
 
 
 
 
 
-export function textArea(item) {
+export function textAreaTemplate({id, label}) {
+	return
 
-	`
-	<div>
-		<textarea class="input-box" id="text-box" placeholder="${item.label}"></textarea>
-	</div>
-	`
+`
+<label for="${id}">${label}</label>
+<textarea class="input-box" id="${id}"></textarea>
+`
 };
