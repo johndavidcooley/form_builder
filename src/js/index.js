@@ -22,7 +22,7 @@ var $middle = $('.middle');
 // 	$fromJS.append(toThePage);
 // });
 
-console.log(inputTemplate(items[0]))
+// console.log(inputTemplate(items[0]))
 
 
 items.forEach(function(item) {
